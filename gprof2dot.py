@@ -3274,10 +3274,11 @@ class DotWriter:
         fontname = theme.graph_fontname()
         fontcolor = theme.graph_fontcolor()
         nodestyle = theme.node_style()
+        bgcolor = self.color(theme.graph_bgcolor())
 
         tolerance, only_slower, only_faster, color_by_difference = (
             options.tolerance, options.only_slower, options.only_faster, options.color_by_difference)
-        self.attr('graph', fontname=fontname, ranksep=0.25, nodesep=0.125)
+        self.attr('graph', fontname=fontname, ranksep=0.25, nodesep=0.125, bgcolor=bgcolor)
         self.attr('node', fontname=fontname, style=nodestyle, fontcolor=fontcolor, width=0, height=0)
         self.attr('edge', fontname=fontname)
 
@@ -3434,8 +3435,9 @@ class DotWriter:
         fontname = theme.graph_fontname()
         fontcolor = theme.graph_fontcolor()
         nodestyle = theme.node_style()
+        bgcolor = self.color(theme.graph_bgcolor())
 
-        self.attr('graph', fontname=fontname, ranksep=0.25, nodesep=0.125)
+        self.attr('graph', fontname=fontname, ranksep=0.25, nodesep=0.125, bgcolor=bgcolor)
         self.attr('node', fontname=fontname, shape="box", style=nodestyle, fontcolor=fontcolor, width=0, height=0)
         self.attr('edge', fontname=fontname)
 
