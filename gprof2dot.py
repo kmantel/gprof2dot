@@ -3185,6 +3185,14 @@ TEMPERATURE_COLORMAP = Theme(
     gamma = 1.0
 )
 
+TEMPERATURE_DARK_COLORMAP = Theme(
+    bgcolor = (0, 0, 0.0),  # black
+    mincolor = (2.0/3.0, 0.20, 0.5), # dark blue
+    maxcolor = (0.0, 1.0, 0.5), # satured red
+    fontcolor = "black",
+    gamma = 1.0
+)
+
 PINK_COLORMAP = Theme(
     mincolor = (0.0, 1.0, 0.90), # pink
     maxcolor = (0.0, 1.0, 0.5), # satured red
@@ -3218,6 +3226,7 @@ PRINT_COLORMAP = Theme(
 
 themes = {
     "color": TEMPERATURE_COLORMAP,
+    "dark": TEMPERATURE_DARK_COLORMAP,
     "pink": PINK_COLORMAP,
     "gray": GRAY_COLORMAP,
     "bw": BW_COLORMAP,
